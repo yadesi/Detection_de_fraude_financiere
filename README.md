@@ -34,7 +34,6 @@ fraud-detection-system/
 |
 |-- data/                   # Datasets et données
 |   |-- raw/                # Données brutes
-|   |-- processed/          # Données traitées
 |
 |-- docker/                 # Configurations Docker
 |   |-- kafka/              # Configuration Kafka

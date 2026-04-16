@@ -1,0 +1,309 @@
+/* Global styles */
+.App {
+  text-align: left;
+}
+
+/* Custom ant design overrides */
+.ant-layout-sider {
+  background: #001529 !important;
+}
+
+.ant-menu-dark {
+  background: #001529 !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background-color: #1890ff !important;
+}
+
+.ant-menu-dark .ant-menu-item:hover {
+  background-color: #1890ff !important;
+}
+
+/* Dashboard specific styles */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.metric-card {
+  text-align: center;
+  padding: 24px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin-bottom: 16px;
+}
+
+.metric-card .ant-statistic-title {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.metric-card .ant-statistic-content {
+  color: white;
+}
+
+/* Progress bar customizations */
+.fraud-progress .ant-progress-bg {
+  background: linear-gradient(90deg, #52c41a 0%, #faad14 50%, #ff4d4f 100%);
+}
+
+/* Table customizations */
+.ant-table-tbody > tr:hover > td {
+  background-color: #f5f5f5 !important;
+}
+
+.fraud-row {
+  background-color: #fff2f0 !important;
+}
+
+.legitimate-row {
+  background-color: #f6ffed !important;
+}
+
+/* Upload area customizations */
+.upload-dragger {
+  border: 2px dashed #d9d9d9;
+  border-radius: 8px;
+  background: #fafafa;
+  text-align: center;
+  padding: 40px 20px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.upload-dragger:hover {
+  border-color: #1890ff;
+}
+
+.upload-dragger.ant-upload-drag-hover {
+  border-color: #1890ff;
+  background: #e6f7ff;
+}
+
+/* Form customizations */
+.transaction-form .ant-form-item-label > label {
+  font-weight: 500;
+}
+
+.result-card {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.result-card.fraud {
+  border-color: #ff4d4f;
+  background-color: #fff2f0;
+}
+
+.result-card.legitimate {
+  border-color: #52c41a;
+  background-color: #f6ffed;
+}
+
+/* Analytics customizations */
+.analytics-card {
+  height: 400px;
+}
+
+.analytics-card .ant-card-body {
+  height: calc(100% - 57px);
+  padding: 16px;
+}
+
+/* Settings customizations */
+.settings-section {
+  margin-bottom: 32px;
+}
+
+.settings-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #262626;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-label {
+  font-weight: 500;
+}
+
+.setting-value {
+  color: #8c8c8c;
+}
+
+/* Status indicators */
+.status-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-indicator.healthy {
+  background-color: #52c41a;
+}
+
+.status-indicator.warning {
+  background-color: #faad14;
+}
+
+.status-indicator.error {
+  background-color: #ff4d4f;
+}
+
+/* Alert customizations */
+.alert-card {
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.alert-card.critical {
+  border-left: 4px solid #ff4d4f;
+}
+
+.alert-card.warning {
+  border-left: 4px solid #faad14;
+}
+
+.alert-card.info {
+  border-left: 4px solid #1890ff;
+}
+
+/* Chart container customizations */
+.chart-container {
+  width: 100%;
+  height: 300px;
+}
+
+.chart-container.large {
+  height: 400px;
+}
+
+/* Loading states */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .metric-card {
+    margin-bottom: 12px;
+  }
+  
+  .chart-container {
+    height: 250px;
+  }
+  
+  .ant-col {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ant-layout-sider {
+    position: fixed !important;
+    z-index: 1000;
+    height: 100vh;
+  }
+  
+  .ant-layout-content {
+    margin-left: 200px;
+  }
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Print styles */
+@media print {
+  .ant-layout-sider,
+  .ant-layout-header {
+    display: none !important;
+  }
+  
+  .ant-layout-content {
+    margin-left: 0 !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "training_date": "2026-04-16T15:58:07.703946",
+  "models": [
+    "logistic_regression",
+    "random_forest",
+    "xgboost"
+  ],
+  "features": [
+    "amount",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "hour_of_day",
+    "amount_log",
+    "type_encoded"
+  ],
+  "performance": {
+    "logistic_regression": 0.9276848606242697,
+    "random_forest": 0.9653847437823403,
+    "xgboost": 0.9981372058087131
+  }
+}
